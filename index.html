@@ -6,199 +6,275 @@
   <title>Amaan Patel | Portfolio</title>
   <style>
     * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
-  color: #333;
-  scroll-behavior: smooth;
-  line-height: 1.6;
-  transition: background 0.4s, color 0.4s;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 150px; /* Prevents sections from hiding behind sticky header */
+    }
 
-header {
-  background: #4a4e69;
-  color: #fff;
-  padding: 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
+    body {
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+    }
 
-header h1 {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-}
+    header {
+      background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-}
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
 
-nav a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #9a8c98;
-  transition: width 0.3s;
-  margin-top: 2px;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-nav a:hover::after {
-  width: 100%;
-}
+    nav a, nav button {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s;
+      position: relative;
+      padding: 5px 10px;
+    }
 
-nav button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 15px;
-}
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #fdcb6e;
+      transition: width 0.3s;
+      margin-top: 2px;
+    }
 
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
+    nav a:hover::after {
+      width: 100%;
+    }
 
-h2 {
-  margin-bottom: 20px;
-  color: #22223b;
-  font-size: 1.8rem;
-  border-left: 5px solid #9a8c98;
-  padding-left: 10px;
-}
+    nav button {
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+    }
 
-p, li {
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-}
+    nav button:hover {
+      background: rgba(255,255,255,0.3);
+    }
 
-ul {
-  list-style: disc;
-  margin-left: 20px;
-}
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
 
-.project {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
+    h2 {
+      margin-bottom: 20px;
+      color: #2d3436;
+      font-size: 1.8rem;
+      border-left: 5px solid #6c5ce7;
+      padding-left: 10px;
+    }
 
-.project:hover {
-  transform: translateY(-5px);
-}
+    p, li {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
 
-.project h3 {
-  margin-bottom: 8px;
-  color: #4a4e69;
-}
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #4a4e69;
-  color: #fff;
-  margin-top: 40px;
-}
+    .project {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-/* Dark mode */
-body.dark {
-  background: #22223b;
-  color: #eee;
-}
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
 
-body.dark header, body.dark footer {
-  background: #000;
-}
+    .project h3 {
+      margin-bottom: 8px;
+      color: #6c5ce7;
+    }
 
-body.dark .project {
-  background: #2a2a40;
-}
+    #contact a {
+      color: #6c5ce7;
+      text-decoration: none;
+    }
 
-body.dark h2 {
-  color: #c9ada7;
-  border-left-color: #c9ada7;
-}
+    #contact a:hover {
+      text-decoration: underline;
+    }
 
-body.dark nav a::after {
-  background: #c9ada7;
-}
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+      color: #fff;
+      margin-top: 40px;
+    }
 
+    body.dark {
+      background: #2d3436;
+      color: #dfe6e9;
+    }
+
+    body.dark header,
+    body.dark footer {
+      background: linear-gradient(90deg, #000, #222);
+    }
+
+    body.dark .project {
+      background: #3a3a3a;
+    }
+
+    body.dark h2 {
+      color: #dfe6e9;
+      border-left-color: #fdcb6e;
+    }
+
+    body.dark nav a::after {
+      background: #fdcb6e;
+    }
+
+    body.dark #contact a {
+      color: #fdcb6e;
+    }
+    #toggleTheme {
+        margin-left: 800px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Amaan Patel</h1>
+    <h1>Aman Patel</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
-      <button id="toggleTheme">🌙</button>
+      <button id="toggleTheme">Change mode</button>
     </nav>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi! I'm Amaan Patel, a passionate developer who loves building full-stack web applications and exploring new technologies.</p>
+    <p>Hi! I'm Aman Patel, a passionate developer who loves building full-stack web applications and exploring new technologies.</p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML / CSS / JavaScript</li>
-      <li>Node.js / Express</li>
-      <li>MongoDB / SQL</li>
-      <li>Java / C</li>
-    </ul>
+    <p><strong>Languages:</strong> Java, C, Python, SQL</p>
+    <p><strong>Web:</strong> HTML, CSS, Sass, JavaScript, React, Node.js, Express.js, MongoDB</p>
+    <p><strong>Data Science:</strong> NumPy, Pandas, Matplotlib, Scikit-learn, EDA, Regression</p>
+    <p><strong>Tools:</strong> Git, GitHub, VS Code, Tableau</p>
+    <p><strong>Interests:</strong> Full-Stack Development, Data Science, Artificial Intelligence</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>TaskFlow - Task Management App</h3>
-      <p>A full-stack app to manage daily tasks, built with Node.js, MongoDB, and React.</p>
+      <ul>
+        <li>Developed a task management app with user authentication and CRUD operations.</li>
+        <li>Built RESTful APIs using Node.js and Express.js; used MongoDB for storage.</li>
+      </ul>
     </div>
     <div class="project">
-      <h3>Translation App</h3>
-      <p>Android app to translate text into Hindi, Kannada, Tamil, and Telugu using Google ML Kit.</p>
+      <h3>Fake News Detector (Python, ML)</h3>
+      <ul>
+        <li>Built a fake news classifier using logistic regression and TF-IDF vectorization.</li>
+        <li>Achieved 85% precision and evaluated performance using F1-score.</li>
+      </ul>
     </div>
     <div class="project">
-      <h3>ElectroStep - Smart Flooring</h3>
-      <p>Piezoelectric flooring system to harvest energy from footsteps and send data to a web dashboard.</p>
+      <h3>Restaurant Food Ordering Website (Full-Stack)</h3>
+      <ul>
+        <li>Created a responsive food ordering platform with dynamic menus and cart functionality.</li>
+        <li>Used HTML, CSS, JavaScript for frontend and Node.js with MongoDB for backend.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="project">
+      <h3>Data Analytics Virtual Internship – Deloitte (via Forage)</h3>
+      <ul>
+        <li>Completed a remote job simulation focused on real-world data analytics tasks.</li>
+        <li>Built an interactive Tableau dashboard to analyze machine breakdowns across global factories.</li>
+        <li>Used Excel and Tableau to deliver insights and simulate client-facing reports.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Databases for Developers: Foundations – Oracle Dev Gym</h3>
+      <ul>
+        <li>Learned SQL fundamentals, relational modeling, and query optimization.</li>
+        <li>Completed hands-on exercises guided by Oracle experts.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Data Science & Machine Learning – Simplilearn</h3>
+      <ul>
+        <li>Covered Python, Pandas, data visualization, and machine learning algorithms.</li>
+        <li>Worked on supervised and unsupervised learning, model evaluation, and EDA.</li>
+      </ul>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: amaan@example.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/amaanpatel</a></p>
-    <p>GitHub: <a href="#">github.com/AmaanPatel470</a></p>
+    <p>Email: amaanpatel0007@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/amaan-patel-b9bb152b7" target="_blank">LinkedIn</a></p>
+    <p>GitHub: <a href="https://github.com/AmanPatel470" target="_blank">GitHub</a></p>
   </section>
 
-  <footer>
-    <p>© 2025 Amaan Patel</p>
-  </footer>
-
   <script>
-    document.getElementById('toggleTheme').addEventListener('click', () => {
+    const toggleButton = document.getElementById('toggleTheme');
+  
+    toggleButton.addEventListener('click', () => {
       document.body.classList.toggle('dark');
+  
+      // Optional: Change button text based on mode
+      if (document.body.classList.contains('dark')) {
+        toggleButton.textContent = 'Light Mode';
+      } else {
+        toggleButton.textContent = 'Dark Mode';
+      }
     });
   </script>
+  
 </body>
 </html>

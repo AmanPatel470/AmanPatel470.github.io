@@ -4,7 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amaan Patel | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  background: #4a4e69;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #9a8c98;
+  transition: width 0.3s;
+  margin-top: 2px;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #22223b;
+  font-size: 1.8rem;
+  border-left: 5px solid #9a8c98;
+  padding-left: 10px;
+}
+
+p, li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.project {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  margin-bottom: 8px;
+  color: #4a4e69;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #4a4e69;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Dark mode */
+body.dark {
+  background: #22223b;
+  color: #eee;
+}
+
+body.dark header, body.dark footer {
+  background: #000;
+}
+
+body.dark .project {
+  background: #2a2a40;
+}
+
+body.dark h2 {
+  color: #c9ada7;
+  border-left-color: #c9ada7;
+}
+
+body.dark nav a::after {
+  background: #c9ada7;
+}
+
+  </style>
 </head>
 <body>
   <header>
@@ -60,13 +195,10 @@
     <p>© 2025 Amaan Patel</p>
   </footer>
 
-  <script src="script.js"></script>
   <script>
-    // Toggle dark mode
-document.getElementById('toggleTheme').addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
-
+    document.getElementById('toggleTheme').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
   </script>
 </body>
 </html>

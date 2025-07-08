@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amaan Patel | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Hello</h1>
+  <header>
+    <h1>Amaan Patel</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="toggleTheme">🌙</button>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Amaan Patel, a passionate developer who loves building full-stack web applications and exploring new technologies.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML / CSS / JavaScript</li>
+      <li>Node.js / Express</li>
+      <li>MongoDB / SQL</li>
+      <li>Java / C</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>TaskFlow - Task Management App</h3>
+      <p>A full-stack app to manage daily tasks, built with Node.js, MongoDB, and React.</p>
+    </div>
+    <div class="project">
+      <h3>Translation App</h3>
+      <p>Android app to translate text into Hindi, Kannada, Tamil, and Telugu using Google ML Kit.</p>
+    </div>
+    <div class="project">
+      <h3>ElectroStep - Smart Flooring</h3>
+      <p>Piezoelectric flooring system to harvest energy from footsteps and send data to a web dashboard.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: amaan@example.com</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/amaanpatel</a></p>
+    <p>GitHub: <a href="#">github.com/AmaanPatel470</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Amaan Patel</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Toggle dark mode
+document.getElementById('toggleTheme').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
+  </script>
 </body>
 </html>

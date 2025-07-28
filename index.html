@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
- <title>Amaan Patel | Portfolio</title>
+  <title>Aman Patel | Portfolio</title>
 </head>
 <body>
   <header>
@@ -21,39 +21,46 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi! I'm Aman Patel, a passionate developer who loves building full-stack web applications and exploring new technologies.</p>
+    <p>Hi! I'm Aman Patel, a passionate developer who builds intelligent web apps and experiments with machine learning. I love turning raw ideas into real-world tech with clean design and purposeful code.</p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <p><strong>Languages:</strong> Java, C, Python, SQL</p>
-    <p><strong>Web:</strong> HTML, CSS, Sass, JavaScript, React, Node.js, Express.js, MongoDB</p>
-    <p><strong>Data Science:</strong> NumPy, Pandas, Matplotlib, Scikit-learn, EDA, Regression</p>
-    <p><strong>Tools:</strong> Git, GitHub, VS Code, Tableau</p>
+    <p><strong>Web:</strong> HTML, CSS, Sass, JavaScript, React, Node.js, Express.js, Django, Flask, MongoDB</p>
+    <p><strong>Data Science:</strong> NumPy, Pandas, Matplotlib, Scikit-learn, EDA, Regression, Excel</p>
+    <p><strong>Tools:</strong> Git, GitHub, VS Code, Tableau, Shell Scripting</p>
     <p><strong>Interests:</strong> Full-Stack Development, Data Science, Artificial Intelligence</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>TaskFlow - Task Management App</h3>
+      <h3>TaskFlow – Task Management App</h3>
       <ul>
         <li>Developed a task management app with user authentication and CRUD operations.</li>
         <li>Built RESTful APIs using Node.js and Express.js; used MongoDB for storage.</li>
       </ul>
     </div>
     <div class="project">
-      <h3>Fake News Detector (Python, ML)</h3>
+      <h3>FraudGuard – Fake Job Detection Using ML</h3>
       <ul>
-        <li>Built a fake news classifier using logistic regression and TF-IDF vectorization.</li>
-        <li>Achieved 85% precision and evaluated performance using F1-score.</li>
+        <li>Built a full-stack web app to detect fraudulent job/internship descriptions using NLP classification.</li>
+        <li>Implemented logistic regression with TF-IDF and deployed the model via Flask API.</li>
       </ul>
     </div>
     <div class="project">
-      <h3>Restaurant Food Ordering Website (Full-Stack)</h3>
+      <h3>Spam SMS Detection (Python, ML)</h3>
       <ul>
-        <li>Created a responsive food ordering platform with dynamic menus and cart functionality.</li>
-        <li>Used HTML, CSS, JavaScript for frontend and Node.js with MongoDB for backend.</li>
+        <li>Developed an SMS classifier using Naive Bayes and TF-IDF on the SMS Spam Collection dataset.</li>
+        <li>Achieved 95% accuracy and deployed results with interactive UI in Jupyter Notebook.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Diabetes Prediction Using Machine Learning</h3>
+      <ul>
+        <li>Built a KNN-based classifier on the PIMA Diabetes dataset; applied preprocessing and scaling.</li>
+        <li>Tuned hyperparameters and achieved 77% accuracy and AUC score of 0.81.</li>
       </ul>
     </div>
   </section>
@@ -82,6 +89,13 @@
         <li>Worked on supervised and unsupervised learning, model evaluation, and EDA.</li>
       </ul>
     </div>
+    <div class="project">
+      <h3>Linux Shell Programming for Beginners – Infosys Springboard</h3>
+      <ul>
+        <li>Learned fundamentals of Bash scripting, terminal commands, and automation strategies.</li>
+        <li>Built custom shell scripts for file handling and system-level operations.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contact">
@@ -93,7 +107,7 @@
 
   <script>
     const toggleButton = document.getElementById('toggleTheme');
-  
+
     toggleButton.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       if (document.body.classList.contains('dark')) {
@@ -103,6 +117,6 @@
       }
     });
   </script>
-  
+
 </body>
 </html>
